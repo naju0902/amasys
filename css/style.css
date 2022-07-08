@@ -1,0 +1,398 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul: #0066ff;
+  --azul2: #3E64F5;
+}
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 1.6em;
+  font-family: 'Source Sans Pro', sans-serif!important;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  scroll-behavior:smooth;
+}
+
+body{
+  height: 100%;
+  background: #000;
+  line-height:1.6em;
+  margin: 0;
+  padding-top: 70px;
+}
+
+::-webkit-scrollbar {width:10px}
+::-webkit-scrollbar-thumb {background-color:#ccc;border-radius:8px}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+a {
+  color:#585858;
+}
+
+a a:focus, a:hover {
+  text-decoration:none;
+}
+
+a:focus {
+  outline:5px auto -webkit-focus-ring-color;
+  outline-offset:-2px
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+form, fieldset, legend{margin:0;padding:0;border:none}
+legend{display:none}
+
+label, input, textarea, select, button {
+  display:inline; 
+  resize:none; 
+  outline:none; 
+  color:inherit; 
+  font-size:inherit; 
+  font-family:inherit;
+  vertical-align:middle }
+
+/* Barra de navegación */
+
+header, footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 3%;
+  height: 70px;
+  background: rgb(0,0,0,0.9);
+  z-index: 2;
+}
+
+.logo { 
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 37px;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+header .social, footer .social {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+header .social li .svg-inline--fa {
+  display: flex;
+  color: var(--azul);
+  font-size: 33px;
+  margin: 10px;
+}
+
+header .btn-whatsapp a {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--azul);
+  padding: 2px 9px;
+  margin: 20px 0;
+  text-transform: uppercase;
+  color: var(--azul);
+  font-weight: 600;
+}
+
+header .social li .svg-inline--fa:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+header .btn-whatsapp a:hover {
+  background: var(--azul);
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* Menu */
+
+.main-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 7%;
+}
+
+#web {
+  background: center url(../img/web.png) no-repeat;
+  background-size: cover;
+}
+
+#sistemas {
+  background: center url(../img/sistemas.png) no-repeat;
+  background-size: cover;
+}
+
+#stock {
+  background: center url(../img/stock.png) no-repeat;
+  background-size: cover;
+}
+
+#cursos {
+  background: center url(../img/cursos.png) no-repeat;
+  background-size: cover;
+}
+
+#reservas {
+  background: center url(../img/reservas.png) no-repeat;
+  background-size: cover;
+}
+
+#pasajes {
+  background: center url(../img/pasajes.png) no-repeat;
+  background-size: cover;
+}
+
+.main-menu article {
+  display: inline-flex;
+  width: 48%;
+  margin: 2% 0;
+  height: 200px;
+  position: relative;
+}
+
+.main-menu article::after {
+  content: '';
+  background: var(--azul2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  opacity: 0.5;
+}
+
+.main-menu article:hover::after {
+  transition: 0.5s;
+  opacity: 0.2;
+}
+
+.main-menu article h2 {
+  position: absolute;
+  bottom: 7%;
+  left: 3%;
+  color: #fff;
+  font-weight: 450;
+  text-transform: uppercase;
+  font-family: system-ui;
+  z-index: 1;
+}
+
+/* Contacto */
+
+.contact {
+  background: center url(../img/fondo.png) no-repeat;
+  background-size: cover;
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* 1° columna contacto */
+
+.contact article:first-child {
+  width: 60%;
+}
+
+#form-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#form-contact > div {
+  position: relative;
+  width: 45%;
+}
+
+#form-contact label {
+  position: absolute;
+  top: 9px;
+  left: 20px;
+  font-size: 14px;
+  color: var(--azul);
+  background: #000;
+  padding: 0 4px;
+}
+
+.contact article form input, .contact article form textarea {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid var(--azul);
+  padding: 12px;
+  margin: 20px 0;
+  background: transparent;
+  color: #ccc;
+}
+
+.contact article form textarea {
+  color: #555;
+}
+
+.contact article form input::placeholder {
+  color: #555
+}
+
+.contact article form button {
+  display: block;
+  width: 95%;
+  background: var(--azul);
+  border: 2px solid var(--azul);
+  padding: 9px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.contact article form button:hover {
+  border-color: #fff;
+  border-radius: 50%
+  transition: 0.5s;
+}
+
+/* 2° columna contacto */
+
+.contact article:last-child {
+  width: 40%;
+}
+
+.contact article:last-child section:first-child {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 50px;
+}
+
+.contact article:last-child section {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.contact article:last-child section svg {
+  position: relative;
+  color: var(--azul);
+  font-size: 40px;
+  top: 2px;
+  left: -20px;
+}
+
+.contact-description {
+  display: block;
+  color: #fff;
+  font-size: 17px;
+}
+
+.contact-description a {
+  color: #fff;
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  background: var(--azul);
+  height: 90px;
+}
+
+footer .social li .svg-inline--fa {
+  display: flex;
+  color:  #fff;
+  font-size: 33px;
+  margin: 10px;
+}
+
+footer .btn-whatsapp a {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #fff;
+  padding: 4px 9px;
+  margin: 28px 0;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+}
+
+footer .social li .svg-inline--fa:hover {
+  color: #222;
+  transition: 0.5s;
+}
+
+footer .btn-whatsapp a:hover {
+  background: #fff;
+  color: var(--azul);
+  transition: 0.5s;
+}
+
+.btn-whatsapp-phone {display: none;}
+
+@media (max-width: 768px) {
+  footer {padding-right: 20%;}
+  .btn-whatsapp {display: none;}
+  .btn-whatsapp-phone {
+    display: block;
+    position: fixed;
+    bottom: 4%;
+    right: 5%;
+    font-size: 45px;
+    z-index: 999;
+    background: #15C125;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+  }
+
+  .btn-whatsapp-phone a {color: #fff;}
+
+  .contact {
+    flex-direction: column-reverse;
+  }
+
+  .contact article:first-child, .contact article:last-child {
+    width: 100%;
+  }
+
+  .contact article:last-child section {
+    display: flex;
+    margin: 25px 0;
+    justify-content: initial;
+  }
+
+  .contact article:last-child section svg {
+    position: inherit;
+    margin-right: 15px;
+  }
+}
